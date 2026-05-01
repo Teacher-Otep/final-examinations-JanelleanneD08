@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 130" width="160" height="130">
+  <style>
+    /* Hover animations */
+    svg:hover .cap { transform-origin: 75px 38px; animation: capBounce 0.6s ease; }
+    svg:hover .tassel-line { animation: tasselSwing 0.8s ease; transform-origin: 88px 34px; }
+    svg:hover .swoosh { animation: drawLine 0.8s ease forwards; }
+    svg:hover .pencil-tip { animation: tipGlow 0.5s ease alternate 2; }
+    svg:hover .name-text { animation: textShimmer 1s ease; }
+
+    @keyframes capBounce {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+      60% { transform: translateY(1px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes tasselSwing {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(12deg); }
+      50% { transform: rotate(-8deg); }
+      75% { transform: rotate(4deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes drawLine {
+      0% { stroke-dashoffset: 150; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes tipGlow {
+      0% { fill: #F0C040; }
+      100% { fill: #FFE680; }
+    }
+
+    @keyframes textShimmer {
+      0% { fill: #1a4f8a; }
+      50% { fill: #3A7BD5; }
+      100% { fill: #1a4f8a; }
+    }
+
+    .swoosh {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 0;
+    }
+  </style>
+
+  <!-- Letter J as a stylized pencil/pen shape -->
+  <path d="M45,18 L45,70 Q45,88 32,88 Q22,88 20,78" 
+        fill="none" stroke="#1a4f8a" stroke-width="8" stroke-linecap="round"/>
+  <!-- Pencil tip on top of J -->
+  <polygon class="pencil-tip" points="45,18 40,8 50,8" fill="#F0C040"/>
+  <line x1="45" y1="8" x2="45" y2="4" stroke="#F0C040" stroke-width="1.5"/>
+
+  <!-- Graduation cap -->
+  <g class="cap">
+    <polygon points="65,30 45,40 65,48 85,40" fill="#2d6db5"/>
+    <rect x="62" y="26" width="6" height="5" rx="1" fill="#1a4f8a"/>
+  </g>
+  <!-- Tassel -->
+  <path class="tassel-line" d="M65,30 L78,34" fill="none" stroke="#F0C040" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="78" cy="34" r="2" fill="#F0C040"/>
+  <line x1="78" y1="36" x2="78" y2="44" stroke="#F0C040" stroke-width="1.5"/>
+
+  <!-- "anelle" text continuing from J -->
+  <text class="name-text" x="52" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" font-style="italic" fill="#1a4f8a" letter-spacing="1">anelle</text>
+
+  <!-- Underline swoosh -->
+  <path class="swoosh" d="M18,82 Q75,92 142,78" fill="none" stroke="#66B0F1" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Tagline -->
+  <text x="75" y="108" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#1a4f8a" letter-spacing="4" font-weight="600">STUDENT MS</text>
+</svg>
