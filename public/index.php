@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo-circle" onclick="hideSections()">
-                <img src="images/logo.svg" id="logo">
+                <img src="images/logo_Janelle.svg" id="logo">
             </div>
         </div>
         <div class="nav-right">
